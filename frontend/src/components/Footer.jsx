@@ -74,7 +74,7 @@ const Footer = () => {
         
         <div className="footer-bottom">
           <div className="footer-bottom-content">
-            <p>&copy; 2024 Costa del Maule. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Costa del Maule. Todos los derechos reservados <a href="https://costadev.xyz" target="_blank" rel="noopener noreferrer">@CostaDev</a>.</p>
             <div className="footer-bottom-links">
               <a href="#privacidad">Política de Privacidad</a>
               <a href="#terminos">Términos de Uso</a>
@@ -87,4 +87,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
