@@ -1,0 +1,32 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.filters-section {
+  background-color: var(--background-light);
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.attractions-section {
+  padding: 40px 0;
+  background-color: var(--background-gray);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filters-section {
+    padding: 15px 0;
+  }
+  
+  .attractions-section {
+    padding: 20px 0;
+  }
+} 

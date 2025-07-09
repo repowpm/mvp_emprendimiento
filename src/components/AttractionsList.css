@@ -1,0 +1,270 @@
+.attractions-list {
+  padding: 20px 0;
+}
+
+.attractions-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.attractions-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.attractions-header p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.attractions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.attraction-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.attraction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.attraction-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.attraction-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.attraction-card:hover .attraction-image img {
+  transform: scale(1.05);
+}
+
+.attraction-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.attraction-card:hover .attraction-overlay {
+  opacity: 1;
+}
+
+.overlay-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--primary-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.overlay-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: scale(1.1);
+}
+
+.overlay-btn.favorite {
+  color: var(--accent-color);
+}
+
+.overlay-btn.favorite:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+.attraction-category {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--primary-color);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.attraction-content {
+  padding: 25px;
+}
+
+.attraction-title {
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.attraction-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.attraction-location svg {
+  color: var(--primary-color);
+}
+
+.attraction-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 1rem;
+}
+
+.star.filled {
+  color: #f39c12;
+}
+
+.star.half {
+  color: #f39c12;
+  opacity: 0.7;
+}
+
+.star.empty {
+  color: #ddd;
+}
+
+.rating-text {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.attraction-description {
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.attraction-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.detail-item strong {
+  color: var(--primary-color);
+}
+
+.attraction-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.feature-tag {
+  background: var(--background-gray);
+  color: var(--text-dark);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.feature-tag.more {
+  background: var(--primary-color);
+  color: white;
+}
+
+.attraction-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.attraction-actions .btn {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+}
+
+.attraction-actions .btn-secondary {
+  flex: 0 0 auto;
+  width: 45px;
+  padding: 10px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-light);
+}
+
+.no-results h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .attractions-header h2 {
+    font-size: 2rem;
+  }
+  
+  .attractions-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .attraction-content {
+    padding: 20px;
+  }
+  
+  .attraction-title {
+    font-size: 1.2rem;
+  }
+  
+  .attraction-actions {
+    flex-direction: column;
+  }
+  
+  .attraction-actions .btn-secondary {
+    width: 100%;
+  }
+} 
